@@ -1,0 +1,8 @@
+{% load_yaml as rawmap %}
+Debian:
+  pkgs:
+    - git-core
+Redhat:
+  pkgs:
+    - git
+{% endload %}
