@@ -2,7 +2,7 @@
 Debian:
   pkgs:
     - git-core
-Redhat:
+RedHat:
   pkgs:
     - git
 {% endload %}
