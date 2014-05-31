@@ -30,7 +30,7 @@ Available states
     :local:
 
 ``git``
-------------
+-------
 Install Git
 
 Additional resources
@@ -58,12 +58,12 @@ Salt Compatibility
 
 Tested with:
 
-* 2014.1.3
+* 2014.1.4
 
 OS Compatibility
 ================
 
 Tested with:
 
-* GNU/ Linux Debian Wheezy 7.5
-* CentOS 6.5
+* GNU/ Linux Debian Wheezy
+* CentOS 6
