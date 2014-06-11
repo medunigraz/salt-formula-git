@@ -12,7 +12,7 @@ NOTICE BEFORE YOU USE
 TODO
 ====
 
-None
+* configure local pre-commit hooks (code syntax check based on file extension, check for ugly *utf-8 mac os white space*)
 
 Instructions
 ============
