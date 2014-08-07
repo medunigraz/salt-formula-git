@@ -6,18 +6,26 @@
 git:
   pkg:
     - installed
-    - pkgs:
-{% for p in datamap.pkgs %}
-      - {{ p }}
-{% endfor %}
+    - pkgs: {{ datamap.pkgs }}
+
+{% if 'global' in datamap.config.manage|default([]) %}
+config_global:
+  file:
+    - managed
+    - name: {{ datamap.config.global.name }}
+    - user: root
+    - group: root
+    - mode: 644
+    - contents_pillar: git:lookup:config:global:plain
+{% endif %}
 
 {% for u in salt['pillar.get']('git:config:manage:users', []) %}
-gitconfig_{{ u }}:
+user_gitconfig_{{ u }}:
   file:
     - managed
     - name: {{ salt['user.info'](u).home ~ '/.gitconfig' }}
     - source: salt://git/files/gitconfig
-    - mode: 644
     - user: {{ u }}
     - group: {{ u }}
+    - mode: 644
 {% endfor %}

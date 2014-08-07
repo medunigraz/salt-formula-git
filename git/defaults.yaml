@@ -2,6 +2,11 @@
 Debian:
   pkgs:
     - git-core
+  config:
+    manage:
+      - global
+    global:
+      name: /etc/gitconfig
 RedHat:
   pkgs:
     - git
