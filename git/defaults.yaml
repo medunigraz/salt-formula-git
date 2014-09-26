@@ -10,4 +10,9 @@ Debian:
 RedHat:
   pkgs:
     - git
+  config:
+    manage:
+      - global
+    global:
+      name: /etc/gitconfig
 {% endload %}
