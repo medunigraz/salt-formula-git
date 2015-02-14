@@ -16,7 +16,7 @@ config_global:
     - user: root
     - group: root
     - mode: 644
-    - contents_pillar: git:lookup:config:global:plain
+    - contents_pillar: git:lookup:config:global:contents
 {% endif %}
 
 {% for u in salt['pillar.get']('git:config:manage:users', []) %}
