@@ -3,16 +3,14 @@ Debian:
   pkgs:
     - git-core
   config:
-    manage:
-      - global
+    manage: []
     global:
       name: /etc/gitconfig
 RedHat:
   pkgs:
     - git
   config:
-    manage:
-      - global
+    manage: []
     global:
       name: /etc/gitconfig
 {% endload %}
