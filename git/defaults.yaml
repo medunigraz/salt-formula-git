@@ -1,7 +1,7 @@
 {% load_yaml as rawmap %}
 Debian:
   pkgs:
-    - git-core
+    - git
   config:
     manage: []
     global:
